@@ -1,7 +1,7 @@
 
 #ifndef __TVK02061_H__
 #define __TVK02061_H__
-#include "ECE0206lin_ioctl.h"
+#include "../ECE0206lin_ioctl.h"
 
 
 #include <stdio.h>
