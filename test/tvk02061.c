@@ -40,7 +40,6 @@ int main()
 
 	//********************
 
-
 	printf("\nOZU test\n");
 
 	if( tstOZU())
