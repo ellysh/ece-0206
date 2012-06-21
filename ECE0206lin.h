@@ -8,15 +8,16 @@
 #include <asm/uaccess.h>
 #include <linux/usb.h>
 #include <linux/mutex.h>
+#include <stdint.h>
 #include "ECE0206lin_ioctl.h"
 
 #define ECE0206_VENDOR_ID    0x04b4
 #define ECE0206_PRODUCT_ID    0x8613
 
-#define    UCHAR     unsigned char
-#define    PUCHAR     unsigned char *
-#define    USHORT     unsigned short int
-#define    ULONG     unsigned long int
+#define    UCHAR     uint8_t
+#define    PUCHAR    uint8_t *
+#define    USHORT    uint16_t
+#define    ULONG     uint32_t
 
 #define    SI_CHANNAL_NUMBER    4
 

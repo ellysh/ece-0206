@@ -7,12 +7,14 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <time.h>
-#define    UCHAR     unsigned char
-#define    USHORT     unsigned short int
-#define    ULONG     unsigned long int
-#define    PULONG     unsigned long int *
-#define    DWORD     long int
-#define    BOOL     bool
+#include <stdint.h>
+
+#define    UCHAR     uint8_t
+#define    USHORT    uint16_t
+#define    ULONG     uint32_t
+#define    PULONG    uint32_t *
+#define    DWORD     uint32_t
+#define    BOOL      bool
 #pragma pack(1)
 
     int  hECE0206;
