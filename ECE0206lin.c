@@ -560,7 +560,7 @@ static int ece0206_release(struct inode *inode, struct file *file)
 //            ioctl
 //...........................................................................
 static int ece0206_ioctl (struct inode *inode, struct file *filp,
-         unsigned int cmd, ULONG arg)
+         unsigned int cmd, POINTER arg)
 {
     struct ece0206_device *dev;
     unsigned short i;

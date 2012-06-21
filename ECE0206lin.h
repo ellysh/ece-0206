@@ -8,7 +8,6 @@
 #include <asm/uaccess.h>
 #include <linux/usb.h>
 #include <linux/mutex.h>
-#include <stdint.h>
 #include "ECE0206lin_ioctl.h"
 
 #define ECE0206_VENDOR_ID    0x04b4
@@ -18,6 +17,7 @@
 #define    PUCHAR    uint8_t *
 #define    USHORT    uint16_t
 #define    ULONG     uint32_t
+#define    POINTER   unsigned long
 
 #define    SI_CHANNAL_NUMBER    4
 
