@@ -458,20 +458,10 @@ static int ece0206_open(struct inode *inode, struct file *file)
      * in resumption */
     mutex_lock(&dev->io_mutex);
 
-    if (!dev->open_count++)
+    dev->open_count++;
+    retval = usb_autopm_get_interface(interface);
+    if (retval)
     {
-        retval = usb_autopm_get_interface(interface);
-        if (retval)
-            {
-                dev->open_count--;
-                mutex_unlock(&dev->io_mutex);
-                kref_put(&dev->kref, ece0206_delete);
-                goto exit;
-            }
-    }
-     else
-    { // exclusive open
-        retval = -EBUSY;
         dev->open_count--;
         mutex_unlock(&dev->io_mutex);
         kref_put(&dev->kref, ece0206_delete);
