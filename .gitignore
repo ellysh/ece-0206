@@ -9,3 +9,10 @@
 
 .tmp_versions/
 test/test_02061
+
+# kscope temporary files
+*.c~
+*.h~
+*.rules~
+Makefile~
+*.o.d
